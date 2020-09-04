@@ -11,13 +11,9 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
-# import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
-
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # Quick-start development settings - unsuitable for production
@@ -86,13 +82,6 @@ DATABASES = {
     }
 }
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
@@ -133,8 +122,6 @@ STATIC_URL = '/static/'
 
 # for django >= 3.1
 STATICFILES_DIRS = [Path(BASE_DIR).joinpath('static')]  #new
-
-# STATICFILES_DIRS = [ BASE_DIR / "static",'/var/www/static/',]
 
 # for django < 3.1
 # STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]  # new
